@@ -8,7 +8,6 @@ import java.util.function.Function;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-import app.Init;
 import model.DataReg;
 import model.HourTemp;
 
@@ -25,10 +24,18 @@ public class Climate {
 	}
 	
 	public static Climate getInstance() {
+		return instance;
+	}
+	
+	public static Climate getInstance(List<DataReg> data) {
 		
-		if(instance==null) instance = new Climate(Init.getAll());
+		if(instance==null)  instance = new Climate(data); //instance = new Climate(Init.getAll());
 		
 		return instance;	
+	}
+	
+	public static void reset() {
+		instance = null;
 	}
 	
 	/*
