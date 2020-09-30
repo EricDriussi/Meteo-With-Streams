@@ -5,4 +5,4 @@ Working example of a Meteo station reporting system based on Streams
 
 ## Installation
 
-Just run from IDE
+Just run from IDE, make sure to init the data!
